@@ -18,27 +18,25 @@ public class SeThash {
      */
     public static void main(String[] args) {
 
-        Set<String> set = new TreeSet<>();
-        set.add("TV");
-        set.add("Table");
-        set.add("Notebook");
+        Scanner sc = new Scanner(System.in);
+        Set<Product> set = new HashSet<>();
+        set.add(new Product("TV", 900.0));
+        set.add(new Product("Notebook", 1200.0));
+        set.add(new Product("Table", 400.0));
         
-        for (String string : set) {
-            System.out.println(string);
-
+        Product prod = new Product("Notebook", 1200.0);
+        
+        System.out.println("Produto");
+        
+        for (Product product : set) {
+            System.out.println(product.toString());
+            
+            
         }
         System.out.println();
+        //testar igualdade
+        System.out.println(set.contains(prod));
 
-        //Alguns testes: remover todos que tem inial T
-        //x tal que
-        set.removeIf(x -> x.charAt(0) == 'T');
-
-        for (String string : set) {
-            System.out.println(string);
-
-        }
-        System.out.println("");
-        System.out.println(set.contains("Notebook"));
     }
 
 }
