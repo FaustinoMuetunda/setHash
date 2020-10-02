@@ -19,12 +19,12 @@ public class SeThash {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        Set<Product> set = new HashSet<>();
+        Set<Product> set = new TreeSet<>();
         set.add(new Product("TV", 900.0));
         set.add(new Product("Notebook", 1200.0));
         set.add(new Product("Table", 400.0));
         
-        Product prod = new Product("Notebook", 1200.0);
+       
         
         System.out.println("Produto");
         
@@ -35,7 +35,7 @@ public class SeThash {
         }
         System.out.println();
         //testar igualdade
-        System.out.println(set.contains(prod));
+        
 
     }
 

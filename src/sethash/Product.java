@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author faust
  */
-public class Product {
+public class Product implements Comparable<Product>{
 
     private String name;
     private Double preco;
@@ -73,6 +73,12 @@ public class Product {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public int compareTo(Product other) {
+        return name.toUpperCase().compareTo(other.getName().toUpperCase());
+    
     }
     
     
